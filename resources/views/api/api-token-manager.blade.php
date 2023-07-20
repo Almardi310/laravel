@@ -26,7 +26,7 @@
                         @foreach (Laravel\Jetstream\Jetstream::$permissions as $permission)
                             <label class="flex items-center">
                                 <x-checkbox wire:model.defer="createApiTokenForm.permissions" :value="$permission"/>
-                                <span class="ml-2 text-sm text-gray-600">{{ $permission }}</span>
+                                <span class="mr-2 text-sm text-gray-600">{{ $permission }}</span>
                             </label>
                         @endforeach
                     </div>
@@ -68,7 +68,7 @@
                                     {{ $token->name }}
                                 </div>
 
-                                <div class="flex items-center ml-2">
+                                <div class="flex items-center mr-2">
                                     @if ($token->last_used_at)
                                         <div class="text-sm text-gray-400">
                                             {{ __('Last used') }} {{ $token->last_used_at->diffForHumans() }}
@@ -129,7 +129,7 @@
                 @foreach (Laravel\Jetstream\Jetstream::$permissions as $permission)
                     <label class="flex items-center">
                         <x-checkbox wire:model.defer="updateApiTokenForm.permissions" :value="$permission"/>
-                        <span class="ml-2 text-sm text-gray-600">{{ $permission }}</span>
+                        <span class="mr-2 text-sm text-gray-600">{{ $permission }}</span>
                     </label>
                 @endforeach
             </div>
@@ -140,7 +140,7 @@
                 {{ __('Cancel') }}
             </x-secondary-button>
 
-            <x-button class="ml-3" wire:click="updateApiToken" wire:loading.attr="disabled">
+            <x-button class="mr-3" wire:click="updateApiToken" wire:loading.attr="disabled">
                 {{ __('Save') }}
             </x-button>
         </x-slot>
@@ -161,7 +161,7 @@
                 {{ __('Cancel') }}
             </x-secondary-button>
 
-            <x-danger-button class="ml-3" wire:click="deleteApiToken" wire:loading.attr="disabled">
+            <x-danger-button class="mr-3" wire:click="deleteApiToken" wire:loading.attr="disabled">
                 {{ __('Delete') }}
             </x-danger-button>
         </x-slot>

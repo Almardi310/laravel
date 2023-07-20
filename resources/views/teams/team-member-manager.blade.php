@@ -210,7 +210,7 @@
                 {{ __('Cancel') }}
             </x-secondary-button>
 
-            <x-button class="ml-3" wire:click="updateRole" wire:loading.attr="disabled">
+            <x-button class="mr-3" wire:click="updateRole" wire:loading.attr="disabled">
                 {{ __('Save') }}
             </x-button>
         </x-slot>
@@ -231,7 +231,7 @@
                 {{ __('Cancel') }}
             </x-secondary-button>
 
-            <x-danger-button class="ml-3" wire:click="leaveTeam" wire:loading.attr="disabled">
+            <x-danger-button class="mr-3" wire:click="leaveTeam" wire:loading.attr="disabled">
                 {{ __('Leave') }}
             </x-danger-button>
         </x-slot>
@@ -252,7 +252,7 @@
                 {{ __('Cancel') }}
             </x-secondary-button>
 
-            <x-danger-button class="ml-3" wire:click="removeTeamMember" wire:loading.attr="disabled">
+            <x-danger-button class="mr-3" wire:click="removeTeamMember" wire:loading.attr="disabled">
                 {{ __('Remove') }}
             </x-danger-button>
         </x-slot>
