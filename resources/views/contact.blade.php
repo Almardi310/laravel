@@ -1,6 +1,6 @@
 <x-master>
 <div class="m-4">
-    Home page
+    Contact me
 </div>
 
 

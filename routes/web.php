@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\showAll;
+use App\Http\Controllers\staticController;
+use App\Http\Controllers\UsefulLinkController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +19,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+
+Route::get('/about',[staticController::class , 'about'])->name('about');
+Route::get('/contact',[staticController::class , 'contact'])->name('contact');
+
+
+Route::resource('usefulLink', UsefulLinkController::class);
+
+
+Route::get('/showAll', [showAll::class, 'print'])->name('showAll');
 
 Route::middleware([
     'auth:sanctum',

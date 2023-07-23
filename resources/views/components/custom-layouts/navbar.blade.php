@@ -22,6 +22,24 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+
+                <div class="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('showAll') }}" :active="request()->routeIs('shoeAll')">
+                        {{ __('custom.UsefulLink') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">
+                        {{ __('custom.about') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
+                        {{ __('custom.contact') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
