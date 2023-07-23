@@ -18,5 +18,8 @@ return [
     'UsefulLink' => 'Useful Link',
     'AddNewLink' => 'Add New Link',
     'AllLinks' => 'All Links',
+    'description' => 'description',
+    'link' => 'link',
+    'AddNewLinkDescription' => 'This is Description of adding a new Link',
 
 ];

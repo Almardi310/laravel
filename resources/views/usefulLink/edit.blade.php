@@ -1,28 +1,33 @@
 <x-master>
     <form action="{{ route('usefulLink.update', $link->id) }}" method="post" class="m-6">
+        @method('PUT')
         @csrf
 
+        <div class="col-span-6 sm:col-span-4">
+            <label for="name" class="mt-4 block font-medium text-sm text-gray-700">{{ __('Name') }}</label>
+            <input type="text" name="name" id="name" autocomplete="name" value="{{ $link->name }}" class="mt-2 w-full border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 rounded-md shadow-sm" >
+            @error('name')
+                <div class="mt-2 text-sm text-red-600">{{ $message }}</div>
+            @enderror
+        </div>
 
-        <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
-        <input type="text" name="name" id="name" autocomplete="name" value="{{ $link->name }}" ><br>
-        @error('name')
-            <div>{{ $message }}</div>
-        @enderror
+        <div class="col-span-6 sm:col-span-4">
+            <label for="description" class="mt-4 block font-medium text-sm text-gray-700">{{ __('custom.description') }}</label>
+            <input type="text" name="description" id="description" autocomplete="description" value="{{ $link->description }}" class="mt-2 w-full border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 rounded-md shadow-sm" >
+            @error('description')
+                <div class="mt-2 text-sm text-red-600">{{ $message }}</div>
+            @enderror
+        </div>
 
+        <div class="col-span-6 sm:col-span-4">
+            <label for="link" class="mt-4 block font-medium text-sm text-gray-700">{{ __('custom.link') }}</label>
+            <input type="text" name="link" id="link" autocomplete="link" value="{{ $link->link }}" class="mt-2 w-full border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 rounded-md shadow-sm" >
+            @error('link')
+                <div class="mt-2 text-sm text-red-600">{{ $message }}</div>
+            @enderror
+        </div>
 
-        <label for="description" class="block text-sm font-medium leading-6 text-gray-900">description</label>
-        <input type="text" name="description" id="description" autocomplete="description" value="{{ $link->description }}" ><br>
-        @error('description')
-            <div>{{ $message }}</div>
-        @enderror
-
-        <label for="link" class="block text-sm font-medium leading-6 text-gray-900">link</label>
-        <input type="text" name="link" id="link" autocomplete="link" value="{{ $link->link }}" ><br><br><br>
-        @error('link')
-            <div>{{ $message }}</div>
-        @enderror
-
-        <button type="submit">Save</button><br>
+        <button type="submit" class="mt-4 text-white bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-emerald-300 dark:focus:ring-emerald-800 shadow-lg shadow-emerald-500/50 dark:shadow-lg dark:shadow-emerald-800/80 font-medium rounded-lg text-sm px-5 py-2 text-center mr-2">{{__(('Edit'))}}</button>
 
     </form>
 

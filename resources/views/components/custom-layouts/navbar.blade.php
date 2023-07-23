@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('showAll') }}" :active="request()->routeIs('shoeAll')">
+                    <x-nav-link href="{{ route('showAll') }}" :active="request()->routeIs('showAll')">
                         {{ __('custom.UsefulLink') }}
                     </x-nav-link>
                 </div>

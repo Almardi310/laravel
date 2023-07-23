@@ -76,8 +76,9 @@ class UsefulLinkController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(UsefulLink $usefulLink)
+    public function destroy($id)
     {
-        //
+        UsefulLink::findorFail($id)->delete();
+        return redirect()->route('usefulLink.index');
     }
 }

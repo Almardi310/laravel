@@ -19,5 +19,9 @@
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
+
+        @if (isset($scripts))
+            {{ $scripts }}
+        @endif
     </body>
 </html>

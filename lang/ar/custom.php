@@ -18,5 +18,7 @@ return [
     'UsefulLink' => 'روابط مفيدة',
     'AddNewLink' => 'إضافة رابط ',
     'AllLinks' => 'كل الروابط ',
-
+    'description' => 'الوصف',
+    'link' => 'الرابط',
+    'AddNewLinkDescription' => 'وصف لاضافة رابط جديد',
 ];
