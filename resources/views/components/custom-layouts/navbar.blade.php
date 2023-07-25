@@ -10,6 +10,7 @@
                     </a>
                 </div>
 
+
                 <!-- Navigation Links -->
                 <div class="hidden space-x-2 mr-4 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('welcome') }}" :active="request()->routeIs('welcome')">
@@ -24,7 +25,7 @@
                 </div>
 
                 <div class="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('showAll') }}" :active="request()->routeIs('showAll')">
+                    <x-nav-link href="{{ route('usefulLink.index') }}" :active="request()->routeIs('usefulLink.index')">
                         {{ __('custom.UsefulLink') }}
                     </x-nav-link>
                 </div>

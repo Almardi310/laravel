@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\showAll;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\staticController;
 use App\Http\Controllers\UsefulLinkController;
 use Illuminate\Support\Facades\Route;
@@ -20,14 +20,17 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+
 Route::get('/about',[staticController::class , 'about'])->name('about');
 Route::get('/contact',[staticController::class , 'contact'])->name('contact');
 
 
-Route::resource('usefulLink', UsefulLinkController::class);
+Route::resource('usefulLink', UsefulLinkController::class)->except(['show']);
+Route::get('/usefulLink/display', [UsefulLinkController::class, 'display'])->name('usefulLink.display');
 
 
-Route::get('/showAll', [showAll::class, 'print'])->name('showAll');
+Route::resource('course', CourseController::class);
+
 
 Route::middleware([
     'auth:sanctum',

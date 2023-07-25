@@ -38,15 +38,15 @@ class UsefulLinkController extends Controller
         $link->description = $request->input('description');
         $link->link = $request->input('link');
         $link->save();
-        return redirect()->route('usefulLink.index');
+        return redirect()->route('usefulLink.display');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(UsefulLink $usefulLink)
+
+    public function display()
     {
-        //
+        return view('usefulLink.display',[
+            'links' => UsefulLink::all()
+        ]);
     }
 
     /**
@@ -70,7 +70,7 @@ class UsefulLinkController extends Controller
         $link->description = $request->input('description');
         $link->link = $request->input('link');
         $link->save();
-        return redirect()->route('usefulLink.index');
+        return redirect()->route('usefulLink.display');
     }
 
     /**
@@ -79,6 +79,6 @@ class UsefulLinkController extends Controller
     public function destroy($id)
     {
         UsefulLink::findorFail($id)->delete();
-        return redirect()->route('usefulLink.index');
+        return redirect()->route('usefulLink.display');
     }
 }
