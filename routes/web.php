@@ -29,7 +29,7 @@ Route::resource('usefulLink', UsefulLinkController::class)->except(['show']);
 Route::get('/usefulLink/display', [UsefulLinkController::class, 'display'])->name('usefulLink.display');
 
 
-Route::resource('course', CourseController::class);
+Route::resource('course', CourseController::class)->except(['show']);
 
 
 Route::middleware([

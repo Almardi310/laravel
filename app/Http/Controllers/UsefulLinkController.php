@@ -8,9 +8,8 @@ use App\Http\Requests\UpdateUsefulLinkRequest;
 
 class UsefulLinkController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
+
     public function index()
     {
         return view('usefulLink.index',[
@@ -19,18 +18,12 @@ class UsefulLinkController extends Controller
     }
 
 
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('usefulLink.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(StoreUsefulLinkRequest $request)
     {
         $link = new UsefulLink();
@@ -49,9 +42,7 @@ class UsefulLinkController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit($id)
     {
         $link = UsefulLink::where('id', $id)->first();
@@ -60,9 +51,7 @@ class UsefulLinkController extends Controller
         }
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(UpdateUsefulLinkRequest $request, $id)
     {
         $link = UsefulLink::where('id', $id)->first();
@@ -73,12 +62,12 @@ class UsefulLinkController extends Controller
         return redirect()->route('usefulLink.display');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy($id)
     {
         UsefulLink::findorFail($id)->delete();
         return redirect()->route('usefulLink.display');
     }
+
+
 }

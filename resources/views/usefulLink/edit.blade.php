@@ -5,7 +5,7 @@
 
         <div class="col-span-6 sm:col-span-4">
             <label for="name" class="mt-4 block font-medium text-sm text-gray-700">{{ __('Name') }}</label>
-            <input type="text" name="name" id="name" autocomplete="name" value="{{ $link->name }}" class="mt-2 w-full border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 rounded-md shadow-sm" >
+            <input type="text" name="name" id="name" autocomplete="name" value="{{ $link->name }}" required class="mt-2 w-full border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 rounded-md shadow-sm" >
             @error('name')
                 <div class="mt-2 text-sm text-red-600">{{ $message }}</div>
             @enderror
@@ -14,7 +14,7 @@
 
         <div class="col-span-6 sm:col-span-4">
             <label for="description" class="mt-4 block font-medium text-sm text-gray-700">{{ __('custom.description') }}</label>
-            <input type="text" name="description" id="description" autocomplete="description" value="{{ $link->description }}" class="mt-2 w-full border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 rounded-md shadow-sm" >
+            <input type="text" name="description" id="description" autocomplete="description" value="{{ $link->description }}" required class="mt-2 w-full border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 rounded-md shadow-sm" >
             @error('description')
                 <div class="mt-2 text-sm text-red-600">{{ $message }}</div>
             @enderror
@@ -22,7 +22,7 @@
 
         <div class="col-span-6 sm:col-span-4">
             <label for="link" class="mt-4 block font-medium text-sm text-gray-700">{{ __('custom.link') }}</label>
-            <input type="url" name="link" id="link" autocomplete="link" value="{{ $link->link }}" class="mt-2 w-full border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 rounded-md shadow-sm" >
+            <input type="url" name="link" id="link" autocomplete="link" value="{{ $link->link }}" required class="mt-2 w-full border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 rounded-md shadow-sm" >
             @error('link')
                 <div class="mt-2 text-sm text-red-600">{{ $message }}</div>
             @enderror
