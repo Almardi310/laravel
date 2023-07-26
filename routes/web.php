@@ -30,7 +30,7 @@ Route::get('/usefulLink/display', [UsefulLinkController::class, 'display'])->nam
 
 
 Route::resource('course', CourseController::class)->except(['show']);
-
+Route::get('/course/test', [CourseController::class, 'test']);
 
 Route::middleware([
     'auth:sanctum',

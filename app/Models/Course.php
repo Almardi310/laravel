@@ -10,4 +10,9 @@ class Course extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+
+    public function usefulLinks(){
+        return $this->belongsToMany(UsefulLink::class);
+    }
 }

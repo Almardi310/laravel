@@ -9,6 +9,13 @@ use App\Http\Requests\UpdateCourseRequest;
 class CourseController extends Controller
 {
 
+
+    public function test()
+    {
+        $corse = Course::find(1);
+        return $corse->usefulLinks;
+    }
+
     public function index()
     {
         $myCourses = Course::all();

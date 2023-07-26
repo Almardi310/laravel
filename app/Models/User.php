@@ -62,12 +62,13 @@ class User extends Authenticatable //implements MustVerifyEmail
     ];
 
     public function detail(){
-        return $this->hasOne(UserDetail::class);
+        return $this->hasOne(UserDetail::class, 'user_id');
     }
 
 
     public function registrations(){
-        return $this->hasMany(Registration::class);
+        return $this->hasMany(Registration::class, 'user_id');
     }
+
 
 }
