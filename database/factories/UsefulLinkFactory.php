@@ -17,7 +17,9 @@ class UsefulLinkFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->sentence(3),
+            'description' => fake()->sentence(),
+            'link' => 'https://www.youtube.com/playlist?list=PLftLUHfDSiZ4GfPZxaFDsA7ejUzD7SpWa',
         ];
     }
 }
